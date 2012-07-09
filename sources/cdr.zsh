@@ -14,7 +14,8 @@ function zaw-src-cdr () {
 }
 
 function zaw-src-cdr-cd () {
-    BUFFER="cd $1"
+    VAR=`echo -n $1 | awk '{ print \$2 }'`
+    BUFFER="cd $VAR"
     zle accept-line
 }
 
